@@ -32,19 +32,24 @@ int main(int argc, const char * argv[])
     
     printf("Length of %s is %d \n", hello, strlength(hello));
     printf("Length of %s is %d \n", test, strlength(test));
+    
+    printf("strcompare(%s,%s) is %d \n", hello, hello, strcompare(hello,hello));
+    printf("strcompare(%s,%s) is %d \n", hello, test, strcompare(hello,test));
+    printf("strcompare(%s,%s) is %d \n", "hello", "jello", strcompare("hello","jello"));
+    
     return 0;
 }
 
 int strcompare(char* str1, char* str2)
 {
     int result=0;
+    if (strlength(str1) != strlength(str2))
+        return result;
     
-    
-    while ((*str1 != '\0') && (*str2 != '\0')) {
-        // placeholder
+    while (*str1 && (result = ((*str1) == (*str2)))) {
+        str1++;
+        str2++;
     }
-    
-    
     return result;
 }
 
