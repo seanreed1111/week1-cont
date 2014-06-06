@@ -28,12 +28,23 @@
 
 int strcompare(char* str1, char* str2);
 int strlength(char* str);
-int strindex(char* str, char* findstr);
-int strreplace(char* str, char* findstr, char* replacestr);
+int strreplace(char* str, char* findstr, char* replacestr); //not yet completed
+
+/* Not yet implemented
+char** splitAtIndex(char* str, int index); //not yet implemented
+
+char* deleteAtIndex(char* original, char* target, int index);// not yet implemented
+char* addAtIndex(char* original, char* target, int index);// not yet implemented
+
+int strindex(char* str, char* findstr); // not yet implemented
+
+ */
 
 int main(int argc, const char * argv[])
 {
-/*
+
+
+
    char* hello = "12345678";
    char test[] = "4444";
     
@@ -46,7 +57,7 @@ int main(int argc, const char * argv[])
     printf("strcompare(%s,%s) is %s \n", hello, test, strcompare(hello,test) ? "true" : "false");
     printf("strcompare(%s,%s) is %s \n", "hello", "jello", strcompare("hello","jello") ? "true" : "false");
     printf("strcompare(%s,%s) is %s \n\n", "hello", "hella", strcompare("hello","hella") ? "true" : "false");
-*/
+
     // 7. Given a string “This is a test”, replace "te" with "gho"
     
     char test2[] = "This is a test";
@@ -56,6 +67,9 @@ int main(int argc, const char * argv[])
     strreplace(test2, "te","gho");
 
     printf("After test: test2 = %s\n", test2);
+    
+    // 8. You have an array of strings. Create a new string, which is a concatenation of all the array elements.
+    
     
     return 0;
 }
@@ -84,6 +98,15 @@ int strlength(char* str){
     return length;
 }
 
+
+
+
+// IMPLEMENTATION INCOMPLETE
+//
+//
+//
+//
+
 // strindex parses through str and returns the index where first occurence of findstr begins. -1 means findstr not found.
 int strindex(char* str, char* findstr){
     int found = -1;
@@ -100,8 +123,39 @@ int strreplace(char* str, char* findstr, char* replacestr){
     int found = strindex(str, findstr);
     
     for (int i = found; (replacestr[i-found] && (str[i]=replacestr[i-found]));i++){
-    // do stuff
+    
     }
     return found;
 }
 
+char* deleteAtIndex(char* original, char* target, int index){
+    char* returnstr;
+    
+    return returnstr;
+}
+
+char* addAtIndex(char* original, char* target, int index){
+    char* returnstr;
+    
+    return returnstr;
+}
+
+//given a string str[0..n-1] of length n, splitAtIndex returns ptr to two strings, str[0..index-1] and str[index..(n-1)
+
+/*
+char** splitAtIndex(char* str, int index){
+    char* str1, str2;
+    
+    char* strstr[2];
+    
+    if (index == -1) //index out of bounds
+        return 0;
+    
+    // find the first string
+    for(int i=0;i<index ;i++ ) {
+        str1[i] = str[i];
+    }
+    
+    return strstr;
+}
+ */
