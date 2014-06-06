@@ -18,31 +18,52 @@
  • Change your program so that the delimiter can be easily changed
  10. Modify the program in 9 above so it can understand countries separated by either a comma or a space or a period. “USA. Canada, Mexico, Bermuda Grenada, Belize”
  11. Change your program so that it can support any number of delimiters.
+ 12. Read a file and store its contents in a string
+ 13. Read an Objective-C file and count the number of lines in that program 14. Modify 11 to count the number of lines of comment marked with //
  */
+ //15. Modify 12 to include /* */ style of comments
+
 
 #include <stdio.h>
 
 int strcompare(char* str1, char* str2);
 int strlength(char* str);
+int strindex(char* str, char* findstr);
+int strreplace(char* str, char* findstr, char* replacestr);
 
 int main(int argc, const char * argv[])
 {
-    char* hello = "12345678";
-    char test[] = "4444";
+/*
+   char* hello = "12345678";
+   char test[] = "4444";
     
-    printf("Length of %s is %d \n", hello, strlength(hello));
-    printf("Length of %s is %d \n", test, strlength(test));
+   printf("Length of %s is %d \n", hello, strlength(hello));
+  printf("Length of %s is %d \n", test, strlength(test));
     
-    printf("strcompare(%s,%s) is %d \n", hello, hello, strcompare(hello,hello));
-    printf("strcompare(%s,%s) is %d \n", hello, test, strcompare(hello,test));
-    printf("strcompare(%s,%s) is %d \n", "hello", "jello", strcompare("hello","jello"));
+    // 6. Given two strings: print true if they are equal and false if they are not equal.
+    
+    printf("strcompare(%s,%s) is %s \n", hello, hello, strcompare(hello,hello) ? "true" : "false");
+    printf("strcompare(%s,%s) is %s \n", hello, test, strcompare(hello,test) ? "true" : "false");
+    printf("strcompare(%s,%s) is %s \n", "hello", "jello", strcompare("hello","jello") ? "true" : "false");
+    printf("strcompare(%s,%s) is %s \n\n", "hello", "hella", strcompare("hello","hella") ? "true" : "false");
+*/
+    // 7. Given a string “This is a test”, replace "te" with "gho"
+    
+    char test2[] = "This is a test";
+    
+    printf("Before test: test2 = %s\n", test2);
+    
+    strreplace(test2, "te","gho");
+
+    printf("After test: test2 = %s\n", test2);
     
     return 0;
 }
 
-int strcompare(char* str1, char* str2)
+int strcompare(char* str1, char* str2) // return 1 if strings are the same and 0 otherwise
 {
     int result=0;
+    
     if (strlength(str1) != strlength(str2))
         return result;
     
@@ -62,3 +83,25 @@ int strlength(char* str){
     }
     return length;
 }
+
+// strindex parses through str and returns the index where first occurence of findstr begins. -1 means findstr not found.
+int strindex(char* str, char* findstr){
+    int found = -1;
+
+    found = 10;// hard code
+
+    return found;
+}
+
+
+// strreplace searches str and replaces first occurrence of findstr with replacestr. -1 means findstr not found.
+
+int strreplace(char* str, char* findstr, char* replacestr){
+    int found = strindex(str, findstr);
+    
+    for (int i = found; (replacestr[i-found] && (str[i]=replacestr[i-found]));i++){
+    // do stuff
+    }
+    return found;
+}
+
