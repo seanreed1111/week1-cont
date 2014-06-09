@@ -28,6 +28,7 @@
 
 int strcompare(char* str1, char* str2);
 int strlength(char* str);
+char* myconcat(char* arr[]); //not yet completed
 int strreplace(char* str, char* findstr, char* replacestr); //not yet completed
 
 /* Not yet implemented
@@ -70,6 +71,12 @@ int main(int argc, const char * argv[])
     
     // 8. You have an array of strings. Create a new string, which is a concatenation of all the array elements.
     
+    char* myarray[4];
+    myarray[0] = "Butch ";
+    myarray[1] = "Cassidy ";
+    myarray[2] = "and the Sundance Kid";
+    
+    printf("%s%s%s\n", myarray[0],myarray[1],myarray[2]);
     
     return 0;
 }
@@ -98,7 +105,20 @@ int strlength(char* str){
     return length;
 }
 
+// takes an array of strings and returns a single string concatenation of all
+// other strings
 
+char* myconcat(char* arr[]){
+    char* str = 0;
+    // compute the length of the array of pointer
+    // take each element of the array in turn
+    // copy element into the return string
+    // remove null character
+    // continue until to more items in the array of strings
+    
+
+    return str;
+}
 
 
 // IMPLEMENTATION INCOMPLETE
