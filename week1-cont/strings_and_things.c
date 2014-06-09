@@ -28,18 +28,6 @@
 
 int strcompare(char* str1, char* str2);
 int strlength(char* str);
-char* myconcat(char* arr[]); //not yet completed
-int strreplace(char* str, char* findstr, char* replacestr); //not yet completed
-
-/* Not yet implemented
-char** splitAtIndex(char* str, int index); //not yet implemented
-
-char* deleteAtIndex(char* original, char* target, int index);// not yet implemented
-char* addAtIndex(char* original, char* target, int index);// not yet implemented
-
-int strindex(char* str, char* findstr); // not yet implemented
-
- */
 
 int main(int argc, const char * argv[])
 {
@@ -65,7 +53,7 @@ int main(int argc, const char * argv[])
     
     printf("Before test: test2 = %s\n", test2);
     
-    strreplace(test2, "te","gho");
+    //strreplace(test2, "te","gho");
 
     printf("After test: test2 = %s\n", test2);
     
@@ -105,77 +93,3 @@ int strlength(char* str){
     return length;
 }
 
-// takes an array of strings and returns a single string concatenation of all
-// other strings
-
-char* myconcat(char* arr[]){
-    char* str = 0;
-    // compute the length of the array of pointer
-    // take each element of the array in turn
-    // copy element into the return string
-    // remove null character
-    // continue until to more items in the array of strings
-    
-
-    return str;
-}
-
-
-// IMPLEMENTATION INCOMPLETE
-//
-//
-//
-//
-
-// strindex parses through str and returns the index where first occurence of findstr begins. -1 means findstr not found.
-int strindex(char* str, char* findstr){
-    int found = -1;
-
-    found = 10;// hard code
-
-    return found;
-}
-
-
-// strreplace searches str and replaces first occurrence of findstr with replacestr. -1 means findstr not found.
-
-int strreplace(char* str, char* findstr, char* replacestr){
-    int found = strindex(str, findstr);
-    
-    for (int i = found; (replacestr[i-found] && (str[i]=replacestr[i-found]));i++){
-    
-    }
-    return found;
-}
-
-char* deleteAtIndex(char* original, char* target, int index){
-    char* returnstr;
-    
-    return returnstr;
-}
-
-char* addAtIndex(char* original, char* target, int index){
-    char* returnstr;
-    
-    return returnstr;
-}
-
-//given a string str[0..n-1] of length n, splitAtIndex returns ptr to two strings, str[0..index-1] and str[index..(n-1)
-
-/*
-char** splitAtIndex(char* str, int index){
-    char* str1, str2;
-    
-    char* strstr[2];
-    
-    if (index == -1) //index out of bounds
-        return 0;
-    
-    // find the first string
-    for(int i=0;i<index ;i++ ) {
-        str1[i] = str[i];
-    }
-    
-    return strstr;
-}
- */
