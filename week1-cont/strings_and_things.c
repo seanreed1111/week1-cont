@@ -25,6 +25,22 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// string.h gets me various string related functions
+// Given char* s,t;
+// Given const char* cs, ct;
+// Given n is of type size_t;
+// Given c is an int converted to char
+
+// We can define the following functions
+
+// char *strcpy(s,ct) copy string ct to string s, incl '\0'. return s
+// char *strcat(s,ct) cat string ct onto the end of s. return s
+// char *strncat(s,ct) cat at most n characters from string ct onto the end of string s. return s
+// int strcmp(cs, ct) returns cs-ct
+
 
 int strcompare(char* str1, char* str2);
 int strlength(char* str);
@@ -49,25 +65,47 @@ int main(int argc, const char * argv[])
 
     // 7. Given a string “This is a test”, replace "te" with "gho"
     
-    char test2[] = "This is a test";
+//    char test2[] = "This is a test";
     
-    printf("Before test: test2 = %s\n", test2);
+//    printf("Before test: test2 = %s\n", test2);
     
-    //strreplace(test2, "te","gho");
+    // locate insertion point
+    
+//    char* insert = strstr(test2, "te");
+//    strcopy(test2, "te","gho");
 
-    printf("After test: test2 = %s\n", test2);
+//    printf("After test: test2 = %s\n", test2);
     
     // 8. You have an array of strings. Create a new string, which is a concatenation of all the array elements.
     
     char* myarray[4];
     myarray[0] = "Butch ";
     myarray[1] = "Cassidy ";
-    myarray[2] = "and the Sundance Kid";
+    myarray[2] = "and the Sundance ";
+    myarray[3] = "Kid";
     
     printf("%s%s%s\n", myarray[0],myarray[1],myarray[2]);
+    char *result8 = malloc(strlength(myarray[0])
+                           +strlength(myarray[1])
+                           +strlength(myarray[2])
+                           +strlength(myarray[3])+1);
+    
+    
+    for(int i=0;i<4;i++){
+        strcat(result8, myarray[i]);
+    }
+    printf("Result 8 is %s\n", result8);
+    
+    int match  = (strlength(result8) == strlength(myarray[0]) +
+                  strlength(myarray[1]) +
+                  strlength(myarray[2]) +
+                  strlength(myarray[3]));
+    
+    printf("String lengths of original and concat arrays %s\n", match ? "match" : "do not match");
     
     return 0;
-}
+    
+} // end of main
 
 int strcompare(char* str1, char* str2) // return 1 if strings are the same and 0 otherwise
 {
@@ -81,15 +119,15 @@ int strcompare(char* str1, char* str2) // return 1 if strings are the same and 0
         str2++;
     }
     return result;
-}
+} // end of strcompare
 
-int strlength(char* str){
+int strlength(char* str){ // does not include null character '\0'
     int length = 0;
     
-    while ((*str) != '\0') {
+    while ((*str++) != '\0') {
         length++;
-        str++;
     }
     return length;
-}
+} // end of strlength
+
 
