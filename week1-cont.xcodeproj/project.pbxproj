@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14305D61193E512100E034FA /* week1_cont.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14305D60193E512100E034FA /* week1_cont.1 */; };
-		14CF6A1D1947927F002D31F6 /* problem_10-11.c in Sources */ = {isa = PBXBuildFile; fileRef = 14CF6A1C1947927F002D31F6 /* problem_10-11.c */; };
+		14CF6A231947A4A7002D31F6 /* problem_13.c in Sources */ = {isa = PBXBuildFile; fileRef = 14CF6A221947A4A7002D31F6 /* problem_13.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +32,8 @@
 		14CF6A15194787EF002D31F6 /* problem_10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = problem_10.c; sourceTree = "<group>"; };
 		14CF6A191947880D002D31F6 /* problem_9.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = problem_9.c; sourceTree = "<group>"; };
 		14CF6A1C1947927F002D31F6 /* problem_10-11.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "problem_10-11.c"; sourceTree = "<group>"; };
+		14CF6A1E19479348002D31F6 /* problem_12.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = problem_12.c; sourceTree = "<group>"; };
+		14CF6A221947A4A7002D31F6 /* problem_13.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = problem_13.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,8 @@
 				14CF6A15194787EF002D31F6 /* problem_10.c */,
 				14CF6A191947880D002D31F6 /* problem_9.c */,
 				14CF6A1C1947927F002D31F6 /* problem_10-11.c */,
+				14CF6A1E19479348002D31F6 /* problem_12.c */,
+				14CF6A221947A4A7002D31F6 /* problem_13.c */,
 			);
 			path = "week1-cont";
 			sourceTree = "<group>";
@@ -125,7 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CF6A1D1947927F002D31F6 /* problem_10-11.c in Sources */,
+				14CF6A231947A4A7002D31F6 /* problem_13.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
