@@ -43,6 +43,7 @@ int main(){
         printf("Token %d is %s\n",i,resultarr[i]);
     }
     
+    free(string9);
     
     return 0;
     

@@ -102,6 +102,7 @@ int main(int argc, const char * argv[])
     printf("String lengths of original and concatted arrays %s\n", match ? "match" : "do not match");
     
 
+    free(result8);
     
     return 0;
     
