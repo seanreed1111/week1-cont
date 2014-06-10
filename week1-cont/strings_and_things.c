@@ -48,9 +48,6 @@ int strlength(char* str);
 
 int main(int argc, const char * argv[])
 {
-
-
-
    char* hello = "12345678";
    char test[] = "4444";
     
@@ -86,10 +83,10 @@ int main(int argc, const char * argv[])
     myarray[3] = "Kid";
     
     printf("%s%s%s\n", myarray[0],myarray[1],myarray[2]);
-    char *result8 = malloc(strlength(myarray[0])
+    char *result8 = malloc((strlength(myarray[0])
                            +strlength(myarray[1])
                            +strlength(myarray[2])
-                           +strlength(myarray[3])+1);
+                           +strlength(myarray[3])+1)*sizeof(char));
     
     
     for(int i=0;i<4;i++){
@@ -104,26 +101,7 @@ int main(int argc, const char * argv[])
     
     printf("String lengths of original and concatted arrays %s\n", match ? "match" : "do not match");
     
-    //9. Given this string: “USA, Canada, Mexico, Bermuda, Grenada, Belize” -- create an array that contains these countries as its elements. Note: the comma is the separator
-    //• Make sure your program works when you add or remove countries from your string
-    //• Change your program so that the delimiter can be easily changed
-    
-    // function declarations
-    int wordCount(char *str, const char *token);//counts # of words in string, with each word separated by token
-    char** splitStringIntoArray(char* src, char* dest[], char *token);
-    
-    char string9[] = "USA, Canada, Mexico, Bermuda, Grenada, Belize";
-    const char* delimiter = ",";
-    
-    int ct = wordCount(string9, delimiter);
-    
-    assert(ct>0); // crashes the program if assertion is not true
-    
-    char* result9[ct]; // declares array of appropriate size
 
-// char** splitStringIntoArray(char* src, char* dest[], char *token)
-    
-    
     
     return 0;
     
@@ -152,24 +130,3 @@ int strlength(char* str){ // does not include null character '\0'
     return length;
 } // end of strlength
 
-int wordCount(char *str, const char *delimiter){
-    int result = 0;// error code if it returns a negative number
-    
-    char *token = strtok(str,delimiter);
-    if ( token != NULL) {
-        result++; // count first token
-        
-        while (strtok(NULL,delimiter) != NULL){
-            result++;
-        }
-    }
-
-    return result;
-}
-
-char** splitStringIntoArray(char* src, char* dest[], char *token){
-    char **result = NULL;
-    
-    return result;
-    
-}
