@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14305D61193E512100E034FA /* week1_cont.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14305D60193E512100E034FA /* week1_cont.1 */; };
-		14CF6A1A1947880D002D31F6 /* problem_9.c in Sources */ = {isa = PBXBuildFile; fileRef = 14CF6A191947880D002D31F6 /* problem_9.c */; };
+		14CF6A1D1947927F002D31F6 /* problem_10-11.c in Sources */ = {isa = PBXBuildFile; fileRef = 14CF6A1C1947927F002D31F6 /* problem_10-11.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +30,8 @@
 		14305D60193E512100E034FA /* week1_cont.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = week1_cont.1; sourceTree = "<group>"; };
 		14305D67193E515200E034FA /* strings_and_things.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strings_and_things.c; sourceTree = "<group>"; };
 		14CF6A15194787EF002D31F6 /* problem_10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = problem_10.c; sourceTree = "<group>"; };
-		14CF6A17194787FC002D31F6 /* problem_11.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = problem_11.c; sourceTree = "<group>"; };
 		14CF6A191947880D002D31F6 /* problem_9.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = problem_9.c; sourceTree = "<group>"; };
+		14CF6A1C1947927F002D31F6 /* problem_10-11.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "problem_10-11.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +68,8 @@
 				14305D67193E515200E034FA /* strings_and_things.c */,
 				14305D60193E512100E034FA /* week1_cont.1 */,
 				14CF6A15194787EF002D31F6 /* problem_10.c */,
-				14CF6A17194787FC002D31F6 /* problem_11.c */,
 				14CF6A191947880D002D31F6 /* problem_9.c */,
+				14CF6A1C1947927F002D31F6 /* problem_10-11.c */,
 			);
 			path = "week1-cont";
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CF6A1A1947880D002D31F6 /* problem_9.c in Sources */,
+				14CF6A1D1947927F002D31F6 /* problem_10-11.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
