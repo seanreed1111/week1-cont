@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14305D61193E512100E034FA /* week1_cont.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14305D60193E512100E034FA /* week1_cont.1 */; };
-		14A4D3641949FAD900C8B12E /* problem_22.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A4D3631949FAD900C8B12E /* problem_22.c */; };
+		14A4D367194A0EA300C8B12E /* problem_22.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A4D3631949FAD900C8B12E /* problem_22.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A4D3641949FAD900C8B12E /* problem_22.c in Sources */,
+				14A4D367194A0EA300C8B12E /* problem_22.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
