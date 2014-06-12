@@ -46,7 +46,6 @@ void swap(int *left, int *right){
 }
 
 void generate(int *array, int length){
-    srand(105);
     for(int i = 0; i< length;i++){
         array[i] = 1-i;
     }
